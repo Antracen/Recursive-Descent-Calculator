@@ -1,10 +1,9 @@
 WRITTEN IN EXTENDED BACKUS-NAUR FORM.
 
-<Calulation>	::= <Term>, {<Add Subtract>, <Term>}
+<Calculation>	::= <Term>, {<Add Subtract>, <Term>}
 <Add Subtract>	::= "+" | "-"
-<Term>			::= <Number>, {<Times Divide>, <Number>}
+<Term>			::= <Factor>, {<Times Divide>, <Factor>}
+<Factor>		::= <Number> | "(", <Calculation>, ")"
 <Times Divide>	::= "*" | "/"
 <Number>		::= <Digit>, {<Digit>}
 <Digit>			::= 0|1|2|3|4|5|6|7|8|9
-
-Tokens: NUMBER, PLUS, MINUS
